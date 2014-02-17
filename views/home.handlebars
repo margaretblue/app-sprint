@@ -4,3 +4,16 @@
     <input type="hidden" name="longitude" value=""/>
     <button type="submit" class="btn btn-success btn-lg" disabled>Check in</button>
 </form>
+{{#if error}}
+<p class="text-warning">{{error}}</p>
+{{/if}}
+{{#if location}}
+<p>
+    You are at <strong>{{location.latitude}}, {{location.longitude}}</strong>.
+</p>
+<p>
+    AKA
+    <blockquote>{{location.address}}</blockquote>
+</p>
+{{/if}}
+<script src="javascripts/client.js"></script>

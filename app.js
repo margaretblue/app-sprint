@@ -37,6 +37,9 @@ if ('development' == app.get('env')) {
 app.get('/', function(req, res) {
   res.render('home');
 });
+// Handle form posts:
+app.post('/', require('./routes/index_post.js'));
+
 app.get('/whatev', function(req, res) {
   res.render('whatev');
 })
